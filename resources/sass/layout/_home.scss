@@ -1,0 +1,163 @@
+// * ------------------------------- * \\
+//          HEADER | SETUP
+// * ------------------------------- * \\
+
+.header {
+    height: 100vh;
+    position: relative;
+    background: $color-gray-1;
+
+    &__img {
+        position: absolute;
+        max-height: 100vh;
+        z-index: 1;
+    }
+    &__img-bk {
+        height: 100vh;
+        background-image: url(../img/background-1.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        -webkit-clip-path: polygon(0 0, 54% 0, 30% 100%, 0% 100%);
+        clip-path: polygon(0 0, 54% 0, 30% 100%, 0% 100%);
+    }
+    &__heading-1 {
+        position: absolute;
+        top: 22%;
+        left: 68%;
+        font-size: 3rem;
+        font-weight: 400;
+        z-index: 2;
+
+        &::after {
+            display: block;
+            height: .2rem;
+            background-color: $color-primary;
+            content: "";
+            width: 10rem;
+            margin: 0 auto;
+            margin-top: 2.4rem;
+        }
+    }
+    &__heading-2 {
+        position: absolute;
+        top: 32%;
+        left: 62%;
+        font-size: 8.6rem;
+        letter-spacing: 1.6rem;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+    &__button {
+        position: absolute;
+        top: 45%;
+        left: 71%;
+        z-index: 1;
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
+
+// * ------------------------------- * \\
+//      INTRODUCTION SECTION | SETUP
+// * ------------------------------- * \\
+
+// Main Section Wrapper
+.intro-section {
+    --scroll-length: 1.5;
+    height: calc(var(--scroll-length) * 100vh);
+    width: 100%;
+    position: relative;
+
+    .intro-content__heading-1,
+    .intro-content__heading-2 {
+        opacity: 1;
+        opacity: calc(1 + var(--viewport-y));
+    }
+}
+
+// Figure holds image || Setups the scrollout
+.figure {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    --scale: calc(.8 + 
+    (.2 * var(--scroll-length) * var(--visible-y))
+    );
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: block; 
+    overflow: hidden;
+    will-change: transform;
+    transform: scale(var(--scale));
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(black, 1);
+        opacity: calc( var(--visible-y) );
+    }
+    &__image {
+        display: block;
+        will-change: transform;
+        transform: scale(calc(1 / var(--scale)));
+    }
+}
+
+
+// div holds headers & text
+.intro-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 35em;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    color: white;
+    padding: 2em;
+    font-size: 2.5vmin;
+
+    * {
+        text-shadow: 0 0 4vmin rgba($color-black, 0.25);
+    }
+    // Grids & Flexbox
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // Headings & Text
+    &__heading-1 {
+        font-size: 2.75em;
+        margin: 0;
+    }
+    &__heading-2 {
+        font-size: 1.25em;
+        font-weight: 600;
+        margin-bottom: .5em;
+    }
+    &__text {
+        grid-row: 2 / 3;
+        line-height: 1.5;
+    }
+}
