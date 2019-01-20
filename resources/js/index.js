@@ -11,4 +11,4 @@ ScrollOut({
   }
 });
 
-Splitting({ target: '.heading' });
+Splitting({ target: '.intro-content__heading-2' });
