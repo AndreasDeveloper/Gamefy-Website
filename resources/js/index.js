@@ -10,5 +10,3 @@ ScrollOut({
     viewportY: true
   }
 });
-
-Splitting({ target: '.intro-content__heading-2' });
