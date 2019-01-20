@@ -36,6 +36,21 @@
 }
 
 /* ------------------------------------------- */
+/* MIXIN FOR TEXT UNDERLINE | SPLITTER
+/* ------------------------------------------- */
+@mixin underline {
+    &::after {
+        display: block;
+        height: .2rem;
+        background-color: $color-primary;
+        content: "";
+        width: 10rem;
+        margin: 0 auto;
+        margin-top: 2.4rem;
+    }
+}
+
+/* ------------------------------------------- */
 /* MEDIA QUERY MANAGER
 /* ------------------------------------------- */
 

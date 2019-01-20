@@ -1,5 +1,5 @@
 // * ------------------------------- * \\
-//      INTRODUCTION SECTION | SETUP
+//    INTRODUCTION SECTION | SETUP
 // * ------------------------------- * \\
 
 // Main Section Wrapper
@@ -9,9 +9,11 @@
     width: 100%;
     position: relative;
 
+    // Sets the opacity of elements
     .intro-content__heading-1,
     .intro-content__heading-2,
-    .intro-content__text {
+    .intro-content__text,
+    .services {
         opacity: 1;
         opacity: calc(1 + var(--viewport-y));
     }
@@ -25,9 +27,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    --scale: calc(.8 + 
-    (.2 * var(--scroll-length) * var(--visible-y))
-    );
+    --scale: calc(.8 + (.2 * var(--scroll-length) * var(--visible-y)));
     position: sticky;
     top: 0;
     left: 0;
@@ -53,7 +53,7 @@
         width: 100%;
         height: 100%;
         z-index: 1;
-        background-color: rgba(black, 1);
+        background-color: rgba($color-black, 1);
         opacity: calc( var(--visible-y) );
     }
     &__image {
@@ -78,27 +78,44 @@
     padding: 2em;
     font-size: 2.5vmin;
 
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) {
+        margin: 0 10rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        margin: 0 5rem;
+    }
+
     * {
         text-shadow: 0 0 4vmin rgba($color-black, 0.25);
     }
     // Grids & Flexbox
-    grid-row: 1 / 2;
+    // Headings & Text
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    // Headings & Text
+    margin-left: 25%;
+    padding-top: 10%;
     &__heading-1 {
         font-size: 2.75em;
+        font-weight: 500;
         margin: 0;
     }
     &__heading-2 {
         font-size: 1.25em;
-        font-weight: 600;
+        font-weight: 400;
+        text-transform: lowercase;
         margin-bottom: .5em;
     }
     &__text {
+        font-weight: 300;
         grid-row: 2 / 3;
         line-height: 1.5;
+        @include underline;
+    }
+    &__heading-1,
+    &__heading-2,
+    &__text {
+        text-align: center;
     }
 }
 .char {

@@ -1,0 +1,72 @@
+// * ------------------------------- * \\
+//          SERVICES | SETUP
+// * ------------------------------- * \\
+
+.services {
+    margin: 15rem -25rem;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-medium) {
+        margin: 15rem 15rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        margin: 5rem 0;
+    }
+    // CSS Grid
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 5rem;
+    align-items: center;
+}
+
+.service-box {
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: .2rem solid transparent;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    // CSS Grid
+    display: grid;
+    grid-template: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__heading {
+        padding-bottom: 1rem;
+        letter-spacing: .1rem;
+        font-weight: 500;
+    }
+    &__text {
+        font-weight: 300;
+    }
+    &:hover {
+        border-bottom-color: $color-primary;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border: .9rem solid transparent;
+        border-top-color: transparent;
+        transform: rotate(180deg);
+        transition: all 0.4s ease-in-out;
+        justify-self: center;
+    }
+}
+.service-box:hover::after {
+    border-top-color: $color-primary;
+}
+.service-box:hover .service-icon {
+    transform: scale(1.2);
+}
+
+.service-icon {
+    width: 6rem;
+    height: 6rem;
+    line-height: 12rem;
+    margin: 0 auto;
+    font-size: 4rem;
+    color: $color-primary;
+    margin-bottom: 4rem;
+    transition: all .2s ease-in-out;
+}
