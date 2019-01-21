@@ -57,6 +57,17 @@
 }
 
 /* ------------------------------------------- */
+/* MIXIN FOR POSITIONING THE TEXT IN SLIDER
+/* ------------------------------------------- */
+@mixin flex-text-slide {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    padding-top: 15%;
+    color: $color-white;
+}
+
+/* ------------------------------------------- */
 /* MEDIA QUERY MANAGER
 /* ------------------------------------------- */
 
