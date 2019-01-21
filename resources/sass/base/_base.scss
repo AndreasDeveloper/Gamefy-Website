@@ -2,6 +2,7 @@
 /* BASIC SETUP
 /* ------------------------------------------- */
 
+// Reset
 *,
 *::after,
 *::before {
@@ -16,7 +17,7 @@ html {
 
     // * --- MEDIA QUERIES --- * \\
 
-    @include respond(phone) {       // NO NEED OF THIS MEDIA QUERY. AS tab-port QUERY ALREADY HAS THE SAME CONTENT IN IT. 
+    @include respond(phone) {    
         font-size: 50%;
     }
 

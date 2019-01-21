@@ -7,11 +7,34 @@
     position: relative;
     background: $color-gray-1;
 
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        height: 80vh;
+    }
+    @media only screen and (max-width: $bp-vsmall-1b) {
+        height: 70vh;
+    }
+    @media only screen and (max-width: $bp-vsmall-5) {
+        height: 50vh;
+    }
+
     &__img {
         position: absolute;
         height: 100vh;
         max-width: 100%;
         z-index: 1;
+
+        @media only screen and (max-width: $bp-small) {
+            height: 80vh;
+        }
+        @media only screen and (max-width: $bp-vsmall-1b) {
+            height: 70vh;
+            max-width: 130%;
+        }
+        @media only screen and (max-width: $bp-vsmall-5) {
+            height: 50vh;
+            max-width: 150%;
+        }
     }
     &__img-bk {
         height: 100vh;
@@ -28,6 +51,15 @@
             -webkit-clip-path: polygon(0 0, 57% 0, 39% 100%, 0% 100%);
             clip-path: polygon(0 0, 57% 0, 39% 100%, 0% 100%);                    
         }
+        @media only screen and (max-width: $bp-small) {
+            height: 80vh;
+        }
+        @media only screen and (max-width: $bp-vsmall-1b) {
+            height: 70vh;
+        }
+        @media only screen and (max-width: $bp-vsmall-5) {
+            height: 50vh;
+        }
     }
     &__heading-1 {
         position: absolute;
@@ -38,8 +70,28 @@
         z-index: 2;
         @include underline; // Text underline
         // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-largest-4) {
+            left: 65%;
+        } 
+        @media only screen and (max-width: $bp-medium-1) {
+            left: 63%;
+        }
         @media only screen and (max-width: $bp-medium) {
             left: 62%;
+        }
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+            left: 66%;
+        }
+        @media only screen and (max-width: $bp-vsmall-1) {
+            font-size: 1.6rem;
+        }
+        @media only screen and (max-width: $bp-vsmall-2) {
+            font-size: 1rem;
+            left: 69%;
+        }
+        @media only screen and (max-width: $bp-vsmall-5) {
+            left: 67%;
         }
     }
     &__heading-2 {
@@ -51,9 +103,29 @@
         text-transform: uppercase;
         z-index: 2;
         // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-largest-4) {
+            left: 56%;
+        } 
+        @media only screen and (max-width: $bp-medium-1) {
+            font-size: 7rem;
+        }
         @media only screen and (max-width: $bp-medium) {
             font-size: 6.5rem;
             left: 55%;
+        }
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4rem;
+            left: 60%;
+        }
+        @media only screen and (max-width: $bp-vsmall-1) {
+            font-size: 3rem;
+        }
+        @media only screen and (max-width: $bp-vsmall-2) {
+            font-size: 2rem;
+            left: 61%;
+        }
+        @media only screen and (max-width: $bp-vsmall-5) {
+            font-size: 1.1rem;
         }
     }
     &__button {
@@ -65,8 +137,22 @@
             color: $color-white;
         }
         // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium-1) {
+            left: 67%;
+        }
         @media only screen and (max-width: $bp-medium) {
             left: 68%;
+        }
+        @media only screen and (max-width: $bp-vsmall-1) {
+            top: 40%;
+            left: 65%;
+        }
+        @media only screen and (max-width: $bp-vsmall-2) {
+            top: 35%;
+            left: 68%;
+        }
+        @media only screen and (max-width: $bp-vsmall-5) {
+            
         }
     }
 }

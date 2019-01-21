@@ -6,11 +6,20 @@
     margin: 15rem -25rem;
 
     // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-largest) {
+        margin: 15rem -10rem;
+    } 
+    @media only screen and (max-width: $bp-largest-4) {
+        margin: 15rem -5rem;
+    } 
     @media only screen and (max-width: $bp-medium) {
-        margin: 15rem 15rem;
+        margin: 5rem 20rem;
     }
     @media only screen and (max-width: $bp-small) {
         margin: 5rem 0;
+    }
+    @media only screen and (max-width: $bp-vsmall-1b) {
+        margin: -3rem 0;
     }
     // CSS Grid
     display: grid;
@@ -30,6 +39,19 @@
     grid-template: min-content 1fr;
     grid-row-gap: 1.5rem;
     grid-column-gap: 2.5rem;
+
+    // * --- MEDIA QUERIES --- * \\\
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1.3rem 0;
+    }
+    @media only screen and (max-width: $bp-vsmall-1b) {
+        padding: .1rem 5rem;
+        font-size: 1rem;
+        grid-row-gap: .3rem;
+    }
+    @media only screen and (max-width: $bp-vsmall-5) {
+        padding: 1.3rem 0;
+    }
 
     &__heading {
         padding-bottom: 1rem;
@@ -69,4 +91,13 @@
     color: $color-primary;
     margin-bottom: 4rem;
     transition: all .2s ease-in-out;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-vsmall-1b) {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    @media only screen and (max-width: $bp-vsmall-5) {
+        margin-bottom: 2rem;
+    }
 }

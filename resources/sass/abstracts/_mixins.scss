@@ -47,6 +47,12 @@
         width: 10rem;
         margin: 0 auto;
         margin-top: 2.4rem;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-vsmall-5) {
+            margin-top: 1.4rem;
+            width: 8rem;
+        }
     }
 }
 
