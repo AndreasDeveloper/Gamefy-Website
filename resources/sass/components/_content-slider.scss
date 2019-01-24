@@ -26,41 +26,61 @@
 }
 
 // Slide Divs
-.slide-1 {
-    background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .60)), url(../img/tlou-1.png);
-    background-position: center;
-    background-size: cover;
-    height: 80vh;
-    max-width: 100%;
-}
-.slide-2 {
-    background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .60)), url(../img/anthem-3.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 80vh;
-    max-width: 100%;
-}
-.slide-3 {
-    background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .60)), url(../img/cyberpunk-1.png);
-    background-position: center;
-    background-size: cover;
-    height: 80vh;
-    max-width: 100%;
-}
+.slide-1 { background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .60)), url(../img/anthem-3.jpg); }
+.slide-2 { background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .60)), url(../img/tlou-1.png); }
+.slide-3 { background-image: linear-gradient(to bottom, rgba($color-black, .40), rgba($color-black, .60)), url(../img/cyberpunk-1.png); }
 
 .slide-1,
 .slide-2,
 .slide-3 {
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    max-width: 100%;
+    background-attachment: fixed;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-vsmall-1b) {
+        height: 70vh;
+    }
+
+    &__title {
+        color: $color-white;
+        font-weight: 300;
+        font-size: 4rem;
+        text-align: center;
+        letter-spacing: .2rem;
+        padding: 4rem;
+        @include underline;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 6rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            font-size: 3rem;
+        }
+    }
     &__heading-1 {
         font-weight: 400;
         font-size: 5.5rem;
         text-transform: uppercase;
         letter-spacing: .3rem;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            font-size: 3rem;
+        }
     }
     &__heading-2 {
         font-weight: 300;
         font-size: 2rem;
         letter-spacing: .1rem;
+
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1rem;
+        }
     }
     &__content {
         @include flex-text-slide;

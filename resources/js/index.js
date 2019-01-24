@@ -11,7 +11,6 @@ ScrollOut({
   }
 });
 
-
 // * ------------------------------- * \\
 //    CONTENT SLIDER | JS SETUP
 // * ------------------------------- * \\
@@ -32,12 +31,14 @@ ScrollOut({
   nextBtn.addEventListener('click', function() {
     if (count === 1) {
       shrinkIt();
-      slider.style.left ='-100%';
+      //slider.style.left ='-100%';
+      $('.slider').delay(1000).animate({left: '-100%'}, 1000);
       zoomIt();
       count = 2;
     } else if (count === 2) {
       shrinkIt();
-      slider.style.left = '-200%';
+      //slider.style.left = '-200%';
+      $('.slider').delay(1000).animate({left: '-200%'}, 1000);
       zoomIt();
       count = 3;
     }
@@ -47,12 +48,14 @@ ScrollOut({
   prevBtn.addEventListener('click', function() {
     if (count === 3) {
       shrinkIt();
-      slider.style.left = '-100%';
+      //slider.style.left = '-100%';
+      $('.slider').delay(1000).animate({left: '-100%'}, 1000);
       zoomIt();
       count = 2;
     } else if (count === 2) {
       shrinkIt();
-      slider.style.left = '0%';
+      //slider.style.left = '0%';
+      $('.slider').delay(1000).animate({left: '0%'}, 1000);
       zoomIt();
       count = 1;
     }
@@ -77,17 +80,17 @@ ScrollOut({
   const zoomIt = () => {
     setTimeout(() => {
       main.style.clipPath = 'polygon(10% 20%, 0% 100%, 90% 80%, 90% 20%, 10% 20%)';
-    }, 1000);
+    }, 2000);
     setTimeout(() => {
       main.style.clipPath = 'polygon(10% 20%, 0% 100%, 100% 100%, 90% 20%, 10% 20%)';
-    }, 1150); 
+    }, 2150); 
 
     setTimeout(() => {
       main.style.clipPath = 'polygon(10% 20%, 0% 100%, 100% 100%, 100% 0%, 10% 20%)';
-    }, 1300);
+    }, 2300);
     setTimeout(() => {
       main.style.clipPath = 'polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 0% 0%)';
-    }, 1450);
+    }, 2450);
   };
 
 })();

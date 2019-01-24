@@ -64,9 +64,19 @@
     top: 85%;
     left: 53%;
     cursor: pointer;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        left: 55%;
+    }
 }
 .prev-btn {
     left: 47%;
+
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-small) {
+        left: 35%;
+    }
 }
 
 

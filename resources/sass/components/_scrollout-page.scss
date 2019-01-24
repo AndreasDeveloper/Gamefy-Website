@@ -21,13 +21,14 @@
 
     // * --- MEDIA QUERIES --- * \\
     @media only screen and (max-width: $bp-medium) {
-        height: calc(var(--scroll-length) * 105vh);
+        height: calc(var(--scroll-length) * 90vh);
     }
     @media only screen and (max-width: $bp-small-lg) {
         height: calc(var(--scroll-length) * 120vh);
     }
     @media only screen and (max-width: $bp-small) {
-        height: calc(var(--scroll-length) * 85vh);
+        height: calc(var(--scroll-length) * 80vh);
+        margin-bottom: 10rem;
     }
     @media only screen and (max-width: $bp-vsmall-1b) {
         height: calc(var(--scroll-length) * 65vh);
@@ -101,9 +102,6 @@
         margin: 0 10rem;
     }
     @media only screen and (max-width: $bp-medium) {
-        margin: 0 5rem;
-    }
-    @media only screen and (max-width: $bp-small) {
         margin: 0 5rem;
     }
     @media only screen and (max-width: $bp-vsmall-5) {
