@@ -89,4 +89,28 @@
         margin-top: 2rem;
         align-self: flex-start;
     }
+    &__save-icon { // Save Icon - Bookmark
+        display: flex;
+        flex-direction: row;
+        float: right;
+        font-size: 4rem;
+        margin-right: 10rem;
+        margin-top: -9rem;
+        color: $color-white;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        // On Hover
+        &:hover {
+            color: $color-primary;
+        }
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: -11rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+            margin-right: 2rem;
+            margin-top: -9.5rem;
+        }
+    }
 }

@@ -1,5 +1,6 @@
 // * --- WEBPACK IMPORT FILES --- * \\
 import '../sass/main.scss';
+import ScrollOut from "scroll-out";
 
 // * --- ScrollOut Implementation --- * \\
 console.clear();
