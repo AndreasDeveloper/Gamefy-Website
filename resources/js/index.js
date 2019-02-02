@@ -3,14 +3,17 @@ import '../sass/main.scss';
 import ScrollOut from "scroll-out";
 
 // * --- ScrollOut Implementation --- * \\
-console.clear();
+(() => {
+  console.clear();
 
-ScrollOut({
-  cssProps: {
-    visibleY: true,
-    viewportY: true
-  }
-});
+  ScrollOut({
+    cssProps: {
+      visibleY: true,
+      viewportY: true
+    }
+  });
+  
+})();
 
 // * ------------------------------- * \\
 //    CONTENT SLIDER | JS SETUP
