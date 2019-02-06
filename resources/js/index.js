@@ -12,7 +12,6 @@ import ScrollOut from "scroll-out";
       viewportY: true
     }
   });
-  
 })();
 
 // * ------------------------------- * \\
@@ -28,7 +27,7 @@ import ScrollOut from "scroll-out";
   const slider = document.querySelector('.slider');
   const main = document.querySelector('.game-slider');
 
-  // Global Variable
+  // 'Global' Variable
   let count = 1;
 
   // Event Listener | Next Button Setup

@@ -40,9 +40,8 @@
     //background-attachment: fixed;
 
     // * --- MEDIA QUERIES --- * \\
-    @media only screen and (max-width: $bp-vsmall-1b) {
-        height: 70vh;
-    }
+    @media only screen and (max-width: $bp-medium) { height: 50vh; }
+    @media only screen and (max-width: $bp-vsmall-1b) { height: 70vh; }
 
     &__title {
         color: $color-white;
@@ -54,12 +53,8 @@
         @include underline;
 
         // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-medium) {
-            font-size: 6rem;
-        }
-        @media only screen and (max-width: $bp-small) {
-            font-size: 3rem;
-        }
+        @media only screen and (max-width: $bp-medium) { font-size: 6rem; }
+        @media only screen and (max-width: $bp-small) { font-size: 3rem; }
     }
     &__heading-1 {
         font-weight: 400;
@@ -68,9 +63,7 @@
         letter-spacing: .3rem;
 
         // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-small) {
-            font-size: 3rem;
-        }
+        @media only screen and (max-width: $bp-small) { font-size: 3rem; }
     }
     &__heading-2 {
         font-weight: 300;
@@ -78,9 +71,7 @@
         letter-spacing: .1rem;
 
         // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-small) {
-            font-size: 1rem;
-        }
+        @media only screen and (max-width: $bp-small) { font-size: 1rem; }
     }
     &__content {
         @include flex-text-slide;
@@ -104,9 +95,7 @@
             color: $color-primary-light;
         }
         // * --- MEDIA QUERIES --- * \\
-        @media only screen and (max-width: $bp-medium) {
-            margin-top: -11rem;
-        }
+        @media only screen and (max-width: $bp-medium) { margin-top: -11rem; }
         @media only screen and (max-width: $bp-small) {
             font-size: 2rem;
             margin-right: 2rem;
